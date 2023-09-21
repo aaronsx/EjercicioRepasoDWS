@@ -25,7 +25,7 @@ public interface IntEmpleados {
    public  void ModificarEmpleado(List<Empleados> bd);
    
    /**
-    * Método para guardar en un fivhero.
+    * Método para guardar en un fichero.
     * @param Una lista Empleado y un archivo File(Url).
     * @return 
     */
