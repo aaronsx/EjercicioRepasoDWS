@@ -21,28 +21,35 @@ public class ImpEmpleados implements IntEmpleados {
 		Scanner preguntar = new Scanner(System.in);
 		Empleados empleado=new Empleados();
 		
-		empleado.setIdEmpleado(calculoId(bd));
-		
-		System.out.println("Introduce el nombre del usuarios.");
-		empleado.setNombre(preguntar.next());
-		
-		System.out.println("Introduce el apellido del usuarios.");
-		empleado.setApellidos(preguntar.next());
-		
-		System.out.println("Introduce el dni del usuarios.");
-		empleado.setDni(preguntar.next());
-		
-		System.out.println("Introduce la fecha de nacimiento del usuarios.");
-		empleado.setFechaDeNacimiento(preguntar.next());
-		
-		System.out.println("Introduce la titulación mas alta del usuarios.");
-		empleado.setTitulaciónMasAlta(preguntar.next());
-		
-		System.out.println("Introduce el numero de la seguirdad social del usuarios.");
-		empleado.setNuSeguriSocial(preguntar.next());
-		
-		System.out.println("Introduce el numero de cuenta del usuarios.");
-		empleado.setNuCuenta(preguntar.next());
+		try
+		{
+			empleado.setIdEmpleado(calculoId(bd));
+			
+			System.out.println("Introduce el nombre del usuarios.");
+			empleado.setNombre(preguntar.next());
+			
+			System.out.println("Introduce el apellido del usuarios.");
+			empleado.setApellidos(preguntar.next());
+			
+			System.out.println("Introduce el dni del usuarios.");
+			empleado.setDni(preguntar.next());
+			
+			System.out.println("Introduce la fecha de nacimiento del usuarios.");
+			empleado.setFechaDeNacimiento(preguntar.next());
+			
+			System.out.println("Introduce la titulación mas alta del usuarios.");
+			empleado.setTitulaciónMasAlta(preguntar.next());
+			
+			System.out.println("Introduce el numero de la seguirdad social del usuarios.");
+			empleado.setNuSeguriSocial(preguntar.next());
+			
+			System.out.println("Introduce el numero de cuenta del usuarios.");
+			empleado.setNuCuenta(preguntar.next());
+		}catch(Exception e) {
+			
+				System.err.println("***ERROR***No se guardo correctamente.");
+			
+		}
 		
 		bd.add(empleado);
 	}
@@ -72,74 +79,83 @@ public class ImpEmpleados implements IntEmpleados {
 					//Si encuentra la id te pregunta si quieres editar todo o por partes
 					if(MetodoSiono("Quieres editar todo el usuario Si/NO"))
 					{
-						System.out.println("Introduce el nombre del usuarios.");
-						emple.setNombre(preguntar.next());
-						
-						System.out.println("Introduce el apellido del usuarios.");
-						emple.setApellidos(preguntar.next());
-						
-						System.out.println("Introduce el dni del usuarios.");
-						emple.setDni(preguntar.next());
-						
-						System.out.println("Introduce la fecha de nacimiento del usuarios.");
-						emple.setFechaDeNacimiento(preguntar.next());
-						
-						System.out.println("Introduce la titulación mas alta del usuarios.");
-						emple.setTitulaciónMasAlta(preguntar.next());
-						
-						System.out.println("Introduce el numero de la seguirdad social del usuarios.");
-						emple.setNuSeguriSocial(preguntar.next());
-						
-						System.out.println("Introduce el numero de cuenta del usuarios.");
-						emple.setNuCuenta(preguntar.next());
+						try {
+							System.out.println("Introduce el nombre del usuarios.");
+							emple.setNombre(preguntar.next());
+							
+							System.out.println("Introduce el apellido del usuarios.");
+							emple.setApellidos(preguntar.next());
+							
+							System.out.println("Introduce el dni del usuarios.");
+							emple.setDni(preguntar.next());
+							
+							System.out.println("Introduce la fecha de nacimiento del usuarios.");
+							emple.setFechaDeNacimiento(preguntar.next());
+							
+							System.out.println("Introduce la titulación mas alta del usuarios.");
+							emple.setTitulaciónMasAlta(preguntar.next());
+							
+							System.out.println("Introduce el numero de la seguirdad social del usuarios.");
+							emple.setNuSeguriSocial(preguntar.next());
+							
+							System.out.println("Introduce el numero de cuenta del usuarios.");
+							emple.setNuCuenta(preguntar.next());
+							
+						}catch(Exception e) {
+							System.err.println("***ERROR***No se guardo correctamente.");
+						}
 					}else
 					{
-						menu.MenuEditar();
-						boolean cerrarmenu=false;
-						do {
-							int opcion=preguntar.nextInt();
-							
-							switch(opcion) 
-							{
-								case 1:
-									System.out.println("Introduce el nombre del usuarios.");
-									emple.setNombre(preguntar.next());
-									break;
-								case 2:
-									System.out.println("Introduce el apellido del usuarios.");
-									emple.setApellidos(preguntar.next());
-									break;
-								case 3:
-									System.out.println("Introduce el dni del usuarios.");
-									emple.setDni(preguntar.next());
-									break;
-								case 4:
-									System.out.println("Introduce la fecha de nacimiento del usuarios.");
-									emple.setFechaDeNacimiento(preguntar.next());
-									break;
-								case 5:
-									System.out.println("Introduce la titulación mas alta del usuarios.");
-									emple.setTitulaciónMasAlta(preguntar.next());
-									break;
-								case 6:
-									System.out.println("Introduce la titulación mas alta del usuarios.");
-									emple.setTitulaciónMasAlta(preguntar.next());
-									break;
-								case 7:
-									System.out.println("Introduce el numero de la seguirdad social del usuarios.");
-									emple.setNuSeguriSocial(preguntar.next());
-									break;
-								case 8:
-									System.out.println("Introduce el numero de cuenta del usuarios.");
-									emple.setNuCuenta(preguntar.next());
-									break;
-								case 0:
-									cerrarmenu=true;
-									break;
-									default:
-										System.out.println("Porfavor elige un numero");
-								}
-						}while(cerrarmenu);
+						try {
+							menu.MenuEditar();
+							boolean cerrarmenu=false;
+							do {
+								int opcion=preguntar.nextInt();
+								
+									switch(opcion) 
+									{
+										case 1:
+											System.out.println("Introduce el nombre del usuarios.");
+											emple.setNombre(preguntar.next());
+											break;
+										case 2:
+											System.out.println("Introduce el apellido del usuarios.");
+											emple.setApellidos(preguntar.next());
+											break;
+										case 3:
+											System.out.println("Introduce el dni del usuarios.");
+											emple.setDni(preguntar.next());
+											break;
+										case 4:
+											System.out.println("Introduce la fecha de nacimiento del usuarios.");
+											emple.setFechaDeNacimiento(preguntar.next());
+											break;
+										case 5:
+											System.out.println("Introduce la titulación mas alta del usuarios.");
+											emple.setTitulaciónMasAlta(preguntar.next());
+											break;
+										case 6:
+											System.out.println("Introduce la titulación mas alta del usuarios.");
+											emple.setTitulaciónMasAlta(preguntar.next());
+											break;
+										case 7:
+											System.out.println("Introduce el numero de la seguirdad social del usuarios.");
+											emple.setNuSeguriSocial(preguntar.next());
+											break;
+										case 8:
+											System.out.println("Introduce el numero de cuenta del usuarios.");
+											emple.setNuCuenta(preguntar.next());
+											break;
+										case 0:
+											cerrarmenu=true;
+											break;
+											default:
+												System.out.println("Porfavor elige un numero");
+										}
+								}while(cerrarmenu);
+							}catch(Exception e) {
+								System.err.println("***ERROR***No se guardo correctamente.");
+							}
 					}	
 					
 					encontrado=true;
@@ -160,27 +176,26 @@ public class ImpEmpleados implements IntEmpleados {
 		int IdParaGuardar=0;
 		Scanner preguntar = new Scanner(System.in);
 		IntFicheros fichero=new ImpFicheros();
-		if(!MetodoSiono("¿Quieres guardar todo los usuarios?"))
-		{
-			System.out.println("Que id Quieres guardar");
-			for(Empleados empleado:bd)
+		//Si la persona le da que no entra en if
+		try {
+			if(!MetodoSiono("¿Quieres guardar todo los usuarios?"))
 			{
-				System.out.println(empleado.toString());
+				System.out.println("Que id Quieres guardar");
+				//Bucle para imprimir por pantalla toda la lista
+				for(Empleados empleado:bd)
+				{
+					System.out.println(empleado.toString());
+					
+				}
 				
+				IdParaGuardar=preguntar.nextInt();
+				fichero.AbrirFicheroEscrito(url, bd, IdParaGuardar);
 			}
-			
-			IdParaGuardar=preguntar.nextInt();
-			fichero.AbrirFicheroEscrito(url, bd, IdParaGuardar);
-		}
-		else
-			fichero.AbrirFicheroEscrito(url, bd, IdParaGuardar);
-			
-			 
-			
-			
-		
-		
-		
+			else
+				fichero.AbrirFicheroEscrito(url, bd, IdParaGuardar);
+		}catch(Exception e) {
+			System.err.println("***ERROR***No se guardo correctamente.");
+		}	
 	}
 	
 	/**
@@ -229,7 +244,4 @@ public class ImpEmpleados implements IntEmpleados {
 		return true;
 		
 	}
-
-	
-
 }

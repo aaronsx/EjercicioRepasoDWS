@@ -16,7 +16,8 @@ import aplicacion.servicios.ImpEmpleados;
 import aplicacion.servicios.IntFicheros;
 import aplicacion.servicios.IntUtilsMenu;
 import aplicacion.servicios.IntEmpleados;
-
+import aplicacion.servicios.IntUtils;
+import aplicacion.servicios.ImpUtils;
 public class Main {
 	/**
 	 * Clase por la que se entra a la aplicación que contiene el main. 
@@ -51,7 +52,7 @@ public class Main {
 						{
 							System.out.println("[INFO] - Has seleccionado la opcion " + opcion);
 						}
-						//Segun la opcion de hace llama a insertar Usuario o Abrir el fichero
+						//Segun la opcion de hace llama a registrar empleado, modificar empleado y guardar en fichero
 						switch (opcion) 
 						{			
 							case 1:
@@ -73,7 +74,7 @@ public class Main {
 								cerrarMenu = true;
 								break;
 							default:
-								System.err.println("Solo se puede del 0 al 2");
+								System.err.println("Solo se puede del 0 al 3");
 						}
 				}catch(InputMismatchException e) {
 					System.err.println("***ERROR***No has introducido un entero");

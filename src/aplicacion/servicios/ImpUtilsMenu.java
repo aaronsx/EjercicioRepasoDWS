@@ -9,17 +9,15 @@ public class ImpUtilsMenu implements IntUtilsMenu {
 
 	@Override
 	public void Menu() {
-		// TODO Auto-generated method stub
 		System.out.println("<-----------Menu------------->");
 		System.out.println("1. Insertar empleado");
 		System.out.println("2. Modificar empleado");
-		System.out.println("2. Guardar empleado");
+		System.out.println("3. Guardar empleado");
 		System.out.println("0. Salir");
 	}
 
 	@Override
 	public void MenuEditar() {
-	
 		System.out.println("<---------Que quieres editar----------->");
 		System.out.println("1-nombre");
 		System.out.println("2-apellido");

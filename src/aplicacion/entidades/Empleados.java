@@ -72,7 +72,7 @@ public class Empleados {
 	}
 	
 	public String toString() {
-		return "Repostaje [id=" + idEmpleado + " |Nombre=" + nombre +" "+ apellidos + " |Fecha de nacimiento= " + fechaDeNacimiento+ " |Titulo= " + titulaciónMasAlta
+		return "Empleado [id=" + idEmpleado + " |Nombre=" + nombre +" "+ apellidos + " |Fecha de nacimiento= " + fechaDeNacimiento+ " |Titulo= " + titulaciónMasAlta
 				+ " |dni= " + dni + " |Numero Seguridad Social=" + nuSeguriSocial + " |Numero Cuenta=" + nuCuenta +"]";
 	}
 }
