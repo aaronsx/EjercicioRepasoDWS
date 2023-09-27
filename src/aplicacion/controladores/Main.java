@@ -16,8 +16,7 @@ import aplicacion.servicios.ImpEmpleados;
 import aplicacion.servicios.IntFicheros;
 import aplicacion.servicios.IntUtilsMenu;
 import aplicacion.servicios.IntEmpleados;
-import aplicacion.servicios.IntUtils;
-import aplicacion.servicios.ImpUtils;
+
 public class Main {
 	/**
 	 * Clase por la que se entra a la aplicación que contiene el main. 
